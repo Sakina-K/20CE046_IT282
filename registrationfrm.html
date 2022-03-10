@@ -1,0 +1,187 @@
+<!--Full Name,Email,mobile number,gender,Address,DOB,Country,course ,Qualification details-->
+<!DOCTYPE html>
+<head>
+    <title>Student Registration form</title>
+    <style>
+        h1{text-align: center;}
+        input[type=submit], input[type=reset]{
+        width: 15%;
+        padding: 8px 12px;
+        margin: 5px 0;
+        box-sizing: border-box;
+        border-style: inherit;
+        font-size: medium;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        table{
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #90dffe 0%,#38a3d1 100%);
+            
+        }
+        input[type=text], input[type=email], input[type=number],input[type=tel],input[type=date]{
+        
+        padding: 6px 12px;
+        margin: 5px 0;
+        box-sizing: border-box;
+        border-radius: 3%;
+        }
+        input[name=F_name],input[name=M_name],input[name=L_name],input[name=email]{
+            width: 50%;
+        }
+        select{
+            padding: 6px 12px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        body{
+             
+            background: linear-gradient(to bottom, #757abf 0%,#8583be 60%,#eab0d1 100%);
+        }
+        textarea{
+            width: 50%;
+            padding: 6px 12px;
+        margin: 5px 0;
+        box-sizing: border-box;
+        border-radius: 3%;
+        }
+    </style>
+</head>
+<body>
+<form action="data.php" target="_blank" method="post">
+    <h1>Student's Registration Form</h1>
+    <!--NAME-->
+    <table align="center" cellspacing="15">
+        <tr>
+            <td><label>First Name: </label></td>
+            <td><input type="text" name="F_name" maxlength="30"></td>
+        </tr>
+      
+        <tr>
+            <td><label>Father's Name: </label></td>
+            <td><input type="text" name="M_name" maxlength="30"></td>
+        </tr>
+    
+    
+    
+        <tr>
+            <td><label>Last Name: </label></td>
+            <td><input type="text" name="L_name" maxlength="30"></td>
+        </tr>
+   
+    <!--GENDER-->
+    <tr>
+        <td><label>GENDER: </label></td>
+        <td><input type="radio" name="gender">Male
+        <input type="radio" name="gender">Female
+        <input type="radio" name="gender">Other</td>
+    </tr>
+
+    <!--EMAIL-->
+    <tr>
+        <td><label>Email: </label></td>
+        <td><input type="email" name="email"></td>
+    </tr>
+
+    <!--NUMBER-->
+    <tr>
+        <td><label>Mobile Number: </label></td>
+        <td><input type="tel" name="number" maxlength="10" ></td>
+    </tr>
+
+    <!--Address-->
+    <tr>
+        <td><label>Address: </label></td>
+        <td><textarea rows="10" cols="50"></textarea></td>
+    </tr>
+    <!--DOB-->
+    <tr>
+        <td><label>Date of Birth: </label></td>
+        <td><input type="date" name="DOB"></td>
+    </tr>
+    <!--COUNTRY-->
+    <tr>
+        <td><label>Nationality: </label></td>
+        <td><input type="text" name="country"></td>
+    </tr>
+    <!--COURSES-->
+    <tr>
+        <td><label>Choose your Course: </label></td>
+        <td><select>Course
+            <option value="Aerospace Engineering">Aerospace Engineering</option>
+            <option value="Agriculture & Food Engineering">Agriculture & Food Engineering</option>
+            <option value="Biotechnology Engineering">Biotechnology Engineering</option>
+            <option value="Chemical Engineering">Chemical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Computer Engineering">Computer Engineering</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+        </select></td>
+    </tr>
+
+    <!--Qualifications-->
+    <tr>
+        <td><label>Qualifications: </label></td>
+        <td><table cellspacing="15">
+            <tr>
+                <td align="center">Sr. No     </td>
+                <td align="center">Examination     </td>
+                <td align="center">Board     </td>
+                <td align="center">Percentage/CGPA    </td>
+                <td align="center">Year of passing    </td>
+    
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>SSC</td>
+                <td><input type="text" name="Board"></td>
+                <td><input type="text" name="per"></td>
+                <td><input type="text" name="year"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>HSC</td>
+                <td><input type="text" name="Board"></td>
+                <td><input type="text" name="per"></td>
+                <td><input type="text" name="year"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>GUJCET</td>
+                <td><input type="text" name="Board"></td>
+                <td><input type="text" name="per"></td>
+                <td><input type="text" name="year"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>JEE MAINS</td>
+                <td><input type="text" name="Board"></td>
+                <td><input type="text" name="per"></td>
+                <td><input type="text" name="year"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>JEE ADVANCED</td>
+                <td><input type="text" name="Board"></td>
+                <td><input type="text" name="per"></td>
+                <td><input type="text" name="year"></td>
+            </tr>
+        </table></td>
+    </tr>
+    
+    
+
+<tr>
+    <td colspan="2" align="center">
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    </td>
+</tr>
+    
+</table>
+</form>
+</body>
+
+
+</html>
